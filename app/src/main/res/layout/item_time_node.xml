@@ -1,59 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     >
 
-    <View
-        android:id="@+id/list_item_line_1"
-        android:layout_width="3dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="50dp"
-        android:background="#a6a6a6"
-        />
+    <LinearLayout
+        android:id="@+id/list_item_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <View
+            android:id="@+id/list_item_line_1"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3"
+            android:background="#a6a6a6"
+            />
 
-    <com.meee.remeber.remembermeee.model.RoundImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/ic_add_a_photo_black_36dp"
-        android:layout_below="@+id/list_item_line_1"
-        android:layout_marginLeft="40dp"
-        android:id="@+id/roundImageView" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/image_photo"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
 
-    <TextView
-        android:id="@+id/list_item_date_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_below="@id/roundImageView"
-        android:text="date\ntime"
-        />
+            android:layout_gravity="center_horizontal"
+            />
 
-    <View
-        android:id="@+id/list_item_line_2"
-        android:layout_width="3dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/list_item_date_time"
-        android:layout_marginLeft="50dp"
-        android:background="#a6a6a6"
-        />
-    
+        <TextView
+            android:id="@+id/list_item_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="date\ntime"
+            />
+
+        <View
+            android:id="@+id/list_item_line_2"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_gravity="center_horizontal"
+            android:background="#a6a6a6"
+            />
+
+
+    </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/list_item_content_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/roundImageView"
-        android:layout_marginTop="-20dp"
-        android:layout_toRightOf="@id/roundImageView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
         android:background="#a6a6a6"
+        android:orientation="vertical"
         android:padding="10dp"
         >
 
         <ImageView
             android:id="@+id/list_item_content_image"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_crop_5_4_black_48dp"
@@ -67,8 +79,9 @@
             android:text="content"
             />
 
-
     </RelativeLayout>
 
 
-</RelativeLayout>
+
+
+</LinearLayout>

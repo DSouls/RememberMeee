@@ -1,7 +1,10 @@
 package com.meee.remeber.remembermeee;
 
+import android.content.ClipData;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -24,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
         listView.setDividerHeight(0);
         timeLineAdapter = new TimeLineAdapter(this, getData());
         listView.setAdapter(timeLineAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     private List<Map<String, Object>> getData() {
