@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.meee.remeber.remembermeee.MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ListView
-        android:id="@+id/list_view"
+    <android.support.v4.widget.DrawerLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-  />
-</RelativeLayout>
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity"
+        >
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</layout>
