@@ -6,6 +6,8 @@ package com.meee.remeber.remembermeee.app;
 
 public class ConstantsImageUrl {
 
+    public static final String IC_AVATAR = "http://ojyz0c8un.bkt.clouddn.com/ic_avatar.png";
+
     //过渡图的链接
     private static final String TRANSITION_URL_01 = "http://ojyz0c8un.bkt.clouddn.com/b_1.jpg";
     private static final String TRANSITION_URL_02 = "http://ojyz0c8un.bkt.clouddn.com/b_2.jpg";
