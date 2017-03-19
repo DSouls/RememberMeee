@@ -3,6 +3,7 @@ package com.meee.remeber.remembermeee;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -15,8 +16,12 @@ import android.widget.LinearLayout;
 
 import com.meee.remeber.remembermeee.app.ConstantsImageUrl;
 import com.meee.remeber.remembermeee.databinding.ActivityMainBinding;
+import com.meee.remeber.remembermeee.ui.gank.GankFragment;
 import com.meee.remeber.remembermeee.ui.menu.NavHomePageActivity;
 import com.meee.remeber.remembermeee.utils.ImgLoadUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -91,6 +96,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         llNavDeedback.setOnClickListener(this);
         llNavAbout.setOnClickListener(this);
         llNavExit.setOnClickListener(this);
+    }
+
+    private void initContentFragment() {
+        ArrayList<Fragment> mFragments = new ArrayList<>();
+        mFragments.add(new GankFragment());
     }
 
 }
